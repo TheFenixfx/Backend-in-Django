@@ -1,23 +1,16 @@
-"""Business Serializer"""
+"""Business view"""
 
-#Django Rest Framework
-from rest_framework import serializers
-#Model
-from api.guatudu.models import Business
-# from api.guatudu.serializers import AdminProfilesSerializer
+# Django REST Framework
+from rest_framework import viewsets
 
-class BusinessSerializer(serializers.ModelSerializer):
-    """Business Model Serializer"""
-    # admin_profiles = AdminProfilesSerializer(read_only=True)
-    class Meta:
-        """Meta class"""
-        model = Business
-        fields = (
-            'id',
-            'name',
-            'image',
-            'phone_number',
-            'email',
-            'rating',
-            'description',
-        )
+# Serializers
+from api.guatudu.serializers import BusinessSerializer
+
+# Models
+from api.guatudu.models import Event
+
+class BusinessViewSet(viewsets.ModelViewSet):
+    """Tag viewset"""
+
+    queryset = Event.objects.all()
+    serializer_class = BusinessSerializer
