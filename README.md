@@ -1,2 +1,2 @@
 <h1>DJANGO API REST for App </h1>
-<p> Snippets de API hecha en DJANGO  with  REST FRAMEWORK, panel AdminLTD. </p>
+<p> Snippets de API hecha en DJANGO  with  REST FRAMEWORK, panel AdminLTD. (Entire Code belong to Sappito Tech)</p>
